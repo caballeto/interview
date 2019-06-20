@@ -1,0 +1,101 @@
+tasks solved
+
+-- solved
+72 - edit distance - H
+231 - is power of 2 - E
+258 - add digits - E
+165 - compare versions - M
+160 - list intersection - M
+71 - simple path - M
+64 - min path sum - M
+63 - unique path2 - M
+300 - LIS - M
+
+Day 1
+S
+303 - RSQ Immutable - E
+304 - RSQ 2D Immutable - M
+338 - counting bits - M
+- Number 1 bits - E
+
+Day 2
+S
+357 - count number with unique digits - M
+91 - decode ways - M
+509 - fibonacci numbers - E
+228 - summary ranges - M
+
+Day 4
+S
+172 - Factorial Trailing Zeroes - E
+217 - Contains duplicates - E
+219 - Contains duplicates 2 - E
+185 - Top 3 salaries - H
+NS
+96 - Unique BST - M
+368 - LDS - M
+220 - contains duplicates 3 - M
+
+-- not solved
+85 - max rectangle - H
+48 - rotate image - M
+198 - house robber - E
+343 - integer break - M
+227 - basic calculator 2 - M
+
+-------------------------
+15 days maraphone
+
+Day 1
+385 - mini parser - M
+341 - flatten list - M
+416 - sum partition - M
+# 316 - remove duplicates - H
+# 698 - k sums partition - M
+
+Day 2
+
+Day 3
+215 - k largest - M
+203 - delete val from linked list - E
+201 - bitwise range - M
+
+Day 4
+699 - falling squares - H
+315 - count solve - H
+237 - delete node - E
+# 218 - skyline - H
+# 493 - reverse pairs (50/50) - H
+
+Day 5
+208 - trie - M
+233 - number one - H
+239 - max window - H
+# 279 - perfect squares - M
+283 - move zeroes - E
+
+Day 6
+307 - range sum query - M
+297 - serialize binary - H
+295 - median stream - H
+# 301 - remove invalid parentheses - H
+326 - power of 3 - E
+
+Day 7
+---
+
+Day 8
+327 - search 2D matrix - M
+# 238 - product except self - M
+287 - find duplicate - M
+349 - intersection of array - E
+345 - reverse vowels - E
+# 329 - longest increasing path - H (use cache!)
+
+Day 10
+# 312 - burst baloons - H
+
+To learn:
+Binary index tree
+Segment tree (307)
+Monotonic queue (239)
