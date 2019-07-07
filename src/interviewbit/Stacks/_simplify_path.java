@@ -9,12 +9,10 @@ public class _simplify_path {
     String[] parts = s.split("/");
 
     for (String part : parts) {
-      if (part.equals(".") || part.isEmpty()) {
-        continue;
-      } else if (part.equals("..")) {
+      if (part.equals("..")) {
         if (!stack.isEmpty())
           stack.remove(stack.size() - 1);
-      } else {
+      } else if (!part.equals(".") && !part.isEmpty()){
         stack.add(part);
       }
     }
