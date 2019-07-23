@@ -1,7 +1,6 @@
 package interviewbit.Math;
 
 import java.math.BigInteger;
-import java.util.Arrays;
 
 public class _sorted_rank {
   private static final BigInteger VALUE = BigInteger.valueOf(1000003);
@@ -35,6 +34,6 @@ public class _sorted_rank {
   }
 
   public static void main(String[] args) {
-    System.out.println(findRank("ZCSFLVHXRYJQKWABGT"));
+    System.out.println(findRank("ABA"));
   }
 }
