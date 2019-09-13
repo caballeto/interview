@@ -9,6 +9,7 @@ public class _word_break {
     marked[0] = true;
 
     for (int i = 0; i < s.length(); i++) {
+      if (!marked[i]) continue;
       for (String word : words) {
         if (marked[i] && equals(s, i, word)) {
           marked[i + word.length()] = true;

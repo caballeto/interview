@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Test {
-  static final int TEST_SIZE = 15000000;
+  static final int TEST_SIZE = 1_000_000;
 
   static class Foo implements Comparable<Foo> {
     int val;
@@ -108,7 +108,39 @@ public class Test {
     return val;
   }
 
-  public static void main(String[] args) {
+  private static void loop_interchange_good() {
+    int[] a = new int[TEST_SIZE], b = new int[TEST_SIZE];
+    for (int i = 0; i < 1_000_000; i++) {
+      a[i] = (i * 10) % 147;
+      b[i] = (i * 15) % 117;
+    }
+
+    long start = System.currentTimeMillis();
+    for (int i = 0; i < TEST_SIZE; i++)
+      for (int j = 0; j < 10; j++)
+        a[i] *= b[i];
+
+    long end = System.currentTimeMillis();
+    System.out.println("Loop: " + a.length + ": " + (end - start) / 1000.);
+  }
+
+  private static void loop_interchange_bad() {
+    int[] a = new int[TEST_SIZE], b = new int[TEST_SIZE];
+    for (int i = 0; i < 1_000_000; i++) {
+      a[i] = (i * 10) % 147;
+      b[i] = (i * 15) % 117;
+    }
+
+    long start = System.currentTimeMillis();
+    for (int j = 0; j < 10; j++)
+      for (int i = 0; i < TEST_SIZE; i++)
+        a[i] *= b[i];
+
+    long end = System.currentTimeMillis();
+    System.out.println("Loop: " + a.length + ": " + (end - start) / 1000.);
+  }
+
+  private static void test_sort() {
     System.out.println("Benchmark objects.");
     benchmark_array_sort();
     benchmark_list_sort_dynamic();
@@ -118,5 +150,21 @@ public class Test {
     benchmark_sort_primitive();
     benchmark_sort_primitive_wrap();
     benchmark_sort_primitive_list();
+  }
+
+  private static void test_interchange() { // JVM performs loop-interchange
+    loop_interchange_bad();
+    loop_interchange_good();
+  }
+
+  public static void main(String[] args) {
+    long start = System.currentTimeMillis();
+    int j = 0;
+
+    for (int i = 0; i < Integer.MAX_VALUE; i++)
+      j++;
+
+    long end = System.currentTimeMillis();
+    System.out.println("Loop: " + (end - start) / 1000.);
   }
 }

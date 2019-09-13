@@ -75,6 +75,7 @@ public class _sudoku {
 
     ArrayList<ArrayList<Character>> sudoku = toChars(sudokuStr);
     solveSudoku(sudoku);
-    System.out.println(sudoku);
+    for (var s : sudoku)
+      System.out.println(s);
   }
 }
