@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// Command example:
+//
+// CREATE: id=1&amount=100&currency=USD
+// FINALIZE: id=1&amount=100
+// PAY: id=1
 public class _stripe_prev {
   private static final String CURRENCY_PARAMETER = "currency=";
   private static final String AMOUNT_PARAMETER = "amount=";
